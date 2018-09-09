@@ -1,0 +1,13 @@
+brand:
+  name: PHGas
+menu-string: Menu
+
+nav:
+  - title: Services
+    url: '#services'
+  - title: Contact
+    url: '#contact'
+
+social-buttons:
+  - icon: fa fa-instagram
+    url: 'https://instagram.com/phgas'

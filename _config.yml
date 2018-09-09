@@ -1,0 +1,12 @@
+title: PHGas
+author: 'Ismail Gunsaya'
+# description: 'en'
+lang: 'en'
+# baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://phgas.net" # the base hostname & protocol for your site, e.g. http://example.com
+assets_path: 'assets/'
+brand_img: 'img/brand.png'
+
+# Build settings
+theme: jekyll-theme-startbootstrap-agency
+

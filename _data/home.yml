@@ -1,0 +1,30 @@
+intro:
+  heading: 020 3633 1725
+  lead-in: Quality Local Engineers
+  btn1: Call us
+  btn2: What we do
+
+services:
+  heading: Services
+  subheading: We offer these services 24 hours a day, 7 days a week.
+  service:
+    - image: service-boiler.jpg
+      heading: Boiler Repair
+      text: We offer same day emergency boiler repairs at competitive rates. All our work is guranteed
+    - image: service-gas.jpg
+      heading: Gas Works
+      text: From landlord certificates to gas leaks, our gas safe engineers are on hand to help.
+    - image: service-plumbing.jpg
+      heading: Plumbing
+      text: From a dripping tap to a burst pipe, we have you covered. No job is too small.
+
+contact:
+  heading: Contact Us
+  subheading: Avaliable anytime, please contact us for a free quotation.
+  social-buttons:
+  - icon: fa fa-twitter
+    url: "#"
+  - icon: fa fa-facebook
+    url: "#"
+  - icon: fa fa-linkedin
+    url: "#"
