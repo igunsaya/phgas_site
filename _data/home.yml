@@ -18,6 +18,12 @@ services:
       heading: Plumbing
       text: From a dripping tap to a burst pipe, we have you covered. No job is too small.
 
+quote:
+  heading: Boiler Quote
+  subheading: Get your free boiler quote here. Fast and free
+  btn: Retrieve Quote
+  email-required: Email Address is Required
+
 contact:
   heading: Contact Us
   subheading: Avaliable anytime, please contact us for a free quotation.

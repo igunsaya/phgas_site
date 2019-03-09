@@ -5,6 +5,8 @@ menu-string: Menu
 nav:
   - title: Services
     url: '#services'
+  - title: Quote
+    url: '#quote'
   - title: Contact
     url: '#contact'
 
