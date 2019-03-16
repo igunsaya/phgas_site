@@ -3,113 +3,223 @@ layout: default
 ---
 {%- assign assets_path = "assets/" -%}
 {%- if site.assets_path -%}
-  {%- assign assets_path = site.assets_path -%}
+{%- assign assets_path = site.assets_path -%}
 {%- endif -%}
-    {% assign ws = '' %}
-    <!-- Header -->
-    <header class="masthead">
-      <div class="container">
-        <div class="intro-text">
-          <div class="intro-lead-in">{{ site.data.home.intro.lead-in }}</div>
-          <div class="intro-heading text-uppercase">{{ site.data.home.intro.heading }}</div>
-          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="tel:02036331725">{{ site.data.home.intro.btn1 }}</a>
-          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">{{ site.data.home.intro.btn2 }}</a>
-        </div>
-      </div>
-    </header>
+{% assign ws = '' %}
+<!-- Header -->
+<header class="masthead">
+  <div class="container">
+    <div class="intro-text">
+      <div class="intro-lead-in">{{ site.data.home.intro.lead-in }}</div>
+      <div class="intro-heading text-uppercase">{{ site.data.home.intro.heading }}</div>
+      <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
+        href="tel:02036331725">{{ site.data.home.intro.btn1 }}</a>
+      <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
+        href="#quote">{{ site.data.home.intro.btn2 }}</a>
+    </div>
+  </div>
+</header>
 
-    <!-- Services -->
-    <section id="services">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">{{ site.data.home.services.heading }}</h2>
-            <h3 class="section-subheading text-muted">{{ site.data.home.services.subheading }}</h3>
-          </div>
-        </div>
-        <div class="row text-center">
-          {%- for service in site.data.home.services.service -%}
-          {% assign ws = '' %}
-          <div class="col-md-4 service-container">
-            <img src="{{ assets_path }}img/{{service.image}}" alt="">
-            <h4 class="service-heading">{{ service.heading }}</h4>
-            <p class="text-muted">{{ service.text }}</p>
-          </div>
-          {%- endfor -%}
-        {% assign ws = '' %}
-        </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <div style="padding:56.25% 0 0 0;position:relative;">
-              <iframe src="https://player.vimeo.com/video/241003928?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;"
-                frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<!-- Services -->
+<section id="services">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">{{ site.data.home.services.heading }}</h2>
+        <h3 class="section-subheading text-muted">{{ site.data.home.services.subheading }}</h3>
+      </div>
+    </div>
+    
+    <div class="row text-center">
+      {%- for service in site.data.home.services.service -%}
+      {% assign ws = '' %}
+      <div class="col-md-4 service-container">
+        <div class="image-container">
+          <a class="serviceImage" data-toggle="modal" data-target="#{{service.id}}">
+            <img src="{{ assets_path }}img/{{service.image}}" alt="" class="image">
+            <div class="overlay">
+              <div class="image-text">More Info</div>
             </div>
-            <script src="https://player.vimeo.com/api/player.js"></script>
-          </div>
+            <div class="overlay-icon">
+                <div class="icon"><i class="fa fa-question-circle fa-2x"></i></div>
+              </div>
+          </a>
         </div>
+        
+        <h4 class="service-heading">{{ service.heading }}</h4>
+        <p class="text-muted">{{ service.text }}</p>
       </div>
-    </section>
 
-
-    <!-- Contact -->
-    <section id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center contact-group">
-            <h2 class="section-heading text-uppercase">{{ site.data.home.contact.heading }}</h2>
-            <h3 class="section-subheading">{{ site.data.home.contact.subheading }}</h3>
-            <h4 class="section-contact-item">Email:
-              <a href="mailto:contact@phgas.net?Subject=Help%20from%20Website" target="_top">contact@phgas.net</a>
-            </h4>
-            <h4 class="section-contact-item">Phone:
-              <a href="tel:02036331725">020 3633 1725</a>
-            </h4>
-            <ul class="list-inline social-buttons">
-              {%- for sm in site.data.default.social-buttons -%}
-              {% assign ws = '' %}
-              <li class="list-inline-item">
-                <a href="{{ sm.url }}">
-                  <i class="{{ sm.icon }}"></i>
-                </a>
-              </li>
-              {%- endfor -%}
-              {% assign ws = '' %}
-            </ul>
-            <!-- <h4 class="section-contact-item">Or contact us using the form below</h4> -->
-          </div>
-        </div>
-        <!-- <div class="row">
-          <div class="col-lg-12">
-            <form id="contactForm" name="sentMessage" novalidate="novalidate">
+      <div class="portfolio-modal modal fade" id="{{service.id}}" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+              <div class="lr">
+                <div class="rl"></div>
+              </div>
+            </div>
+            <div class="container">
               <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <input class="form-control" id="name" type="text" placeholder="{{ site.data.home.contact.name }}" required="required" data-validation-required-message="{{ site.data.home.contact.name-required }}">
-                    <p class="help-block text-danger"></p>
+                <div class="col-lg-8 mx-auto">
+                  <div class="modal-body">
+                    <h3 class="text-uppercase">{{ service.heading }}</h3>
+                    <p class="item-intro text-muted">{{ service.fullDescription1 }}</p>
+                    <p class="item-intro text-muted">{{ service.fullDescription2 }}</p>
+                    <p class="item-intro text-muted">{{ service.fullDescription3 }}</p>
+                    <button class="btn btn-primary" data-dismiss="modal" type="button">
+                      <i class="{{ site.data.default.modal.close-icon }}"></i>
+                      Close</button>
                   </div>
-                  <div class="form-group">
-                    <input class="form-control" id="email" type="email" placeholder="{{ site.data.home.contact.email }}" required="required" data-validation-required-message="{{ site.data.home.contact.email-required }}">
-                    <p class="help-block text-danger"></p>
-                  </div>
-                  <div class="form-group">
-                    <input class="form-control" id="phone" type="tel" placeholder="{{ site.data.home.contact.phone }}" required="required" data-validation-required-message="{{ site.data.home.contact.phone-required }}">
-                    <p class="help-block text-danger"></p>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <textarea class="form-control" id="message" placeholder="{{ site.data.home.contact.message }}" required="required" data-validation-required-message="{{ site.data.home.contact.message-required }}"></textarea>
-                    <p class="help-block text-danger"></p>
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-                <div class="col-lg-12 text-center">
-                  <div id="success"></div>
-                  <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">{{ site.data.home.contact.btn }}</button>
                 </div>
               </div>
-            </form>
+            </div>
           </div>
-        </div> -->
+        </div>
       </div>
-    </section>
+      {%- endfor -%}
+      {% assign ws = '' %}
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div style="padding:56.25% 0 0 0;position:relative;">
+          <iframe src="https://player.vimeo.com/video/241003928?title=0&byline=0&portrait=0"
+            style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen
+            mozallowfullscreen allowfullscreen></iframe>
+        </div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Quote Machine -->
+<section id="quote">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">{{ site.data.home.quote.heading }}</h2>
+        <h3 class="section-subheading text-muted">{{ site.data.home.quote.subheading }}</h3>
+      </div>
+    </div>
+    <div class="col-lg-12">
+      <form id="quoteForm" name="quoteForm" data-netlify="true">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group py-2">
+              <h4>Boiler Brand</h4>
+              <select class="form-control" name="boilerBrand" id="boilerBrand" required="required">
+                <option value="valliant" data-cost=2050>Valliant</option>
+                <option value="worchester" data-cost=2050>Worchester Bosch</option>
+                <option value="ideal" data-cost=1600>Ideal</option>
+                <option value="baxi" data-cost=1600>Baxi</option>
+              </select>
+            </div>
+            <div class="form-group py-2">
+              <h4>Property Type</h4>
+              <select class="form-control" name="propertyType" id="propertyType" required="required">
+                <option value="Flat">Flat</option>
+                <option value="Terraced">Terraced</option>
+                <option value="Semi-Detached">Semi-Detached</option>
+                <option value="Detached">Detached</option>
+                <option value="Bungalow">Bungalow</option>
+              </select>
+            </div>
+            <div class="form-group py-2">
+              <h4>Bedrooms</h4>
+              <select class="form-control" name="bedrooms" id="bedrooms" required="required">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5+">5+</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group py-2">
+              <h4>Bathrooms</h4>
+              <select class="form-control" name="bathrooms" id="bathrooms" required="required">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6+">6+</option>
+              </select>
+            </div>
+            <div class="form-group py-2">
+              <h4>Do you have a Hot Water Cylinder?</h4>
+              <select class="form-control" name="hotWaterCylinder" id="hotWaterCylinder" required="required">
+                <option data-cost=0>Yes, I'd like to keep it</option>
+                <option data-cost=250>Yes, but I'd like to remove it</option>
+                <option data-cost=500>No, but I'd like to install one</option>
+                <option data-cost=0>No</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="clearfix"></div>
+          <div class="col-lg-12 text-center">
+            <div id="success"></div>
+            <div id="your-quote">
+              <div class="row">
+                <div class="col-lg-12 text-center">
+                  <h2 class="section-heading text-uppercase">Your Quote</h2>
+                  <h3 class="section-subheading text-muted">* This is an estimate</h3>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <img id="boilerImage" src="" alt="">
+                </div>
+                <div class="col-md-6 text-left">
+                  <div class="pb-3" id="priceWrapper"></div>
+                  <h4>This quote includes the following:</h4>
+                  <ul>
+                    <li>Power Flush with All Chemicals</li>
+                    <li>Magnetic Filter </li>
+                    <li>Magnetic Scale Reducer</li>
+                    <li>Boiler+ Smart Controls</li>
+                    <li>Professional Gas Safe Installation</li>
+                    <li>Gas Certificate</li>
+                    <li>Building Regulations Compliance Certificate</li>
+                    <li>Optional Finance Cover 0% Interest</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase mt-4"
+              type="submit">{{ site.data.home.quote.btn }}</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+<!-- Contact -->
+<section id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center contact-group">
+        <h2 class="section-heading text-uppercase">{{ site.data.home.contact.heading }}</h2>
+        <h3 class="section-subheading">{{ site.data.home.contact.subheading }}</h3>
+        <h4 class="section-contact-item">Email:
+          <a href="mailto:contact@phgas.net?Subject=Help%20from%20Website" target="_top">contact@phgas.net</a>
+        </h4>
+        <h4 class="section-contact-item">Phone:
+          <a href="tel:02036331725">020 3633 1725</a>
+        </h4>
+        <ul class="list-inline social-buttons">
+          {%- for sm in site.data.default.social-buttons -%}
+          {% assign ws = '' %}
+          <li class="list-inline-item">
+            <a href="{{ sm.url }}">
+              <i class="{{ sm.icon }}"></i>
+            </a>
+          </li>
+          {%- endfor -%}
+          {% assign ws = '' %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

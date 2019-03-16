@@ -103,3 +103,14 @@ img::selection {
 img::-moz-selection {
   background: transparent;
 }
+
+section#quote {
+  background-color: $gray-800;
+  color: white;
+  .form-info {
+    font-size: 12px;
+    line-height: 22px;
+    @include serif-font;
+  }
+}
+

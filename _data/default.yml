@@ -5,9 +5,11 @@ menu-string: Menu
 nav:
   - title: Services
     url: '#services'
+  - title: Quote
+    url: '#quote'
   - title: Contact
     url: '#contact'
 
 social-buttons:
-  - icon: fa fa-instagram
+  - icon: fab fa-instagram
     url: 'https://instagram.com/phgas'

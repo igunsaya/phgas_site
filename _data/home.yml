@@ -2,21 +2,34 @@ intro:
   heading: 020 3633 1725
   lead-in: Quality Local Engineers
   btn1: Call us
-  btn2: What we do
+  btn2: Get a Quote
 
 services:
   heading: Services
   subheading: We offer these services 24 hours a day, 7 days a week.
   service:
     - image: service-boiler.jpg
-      heading: Boiler Repair
+      heading: Boiler Repairs
+      id: boiler
       text: We offer same day emergency boiler repairs at competitive rates. All our work is guranteed
+      fullDescription1: We are specialists in same day boiler repairs and can offer you boiler repairs from as little as £45 + VAT.  We work on all boiler brands and have over 10 years experience with both condensing and non condensing boilers.
+      fullDescription2: Whether you have a Combination Boiler or a Conventional System, we are here to help. All boiler repairs come with one years parts and labour  guarantee.
+      fullDescription3: Our prices are very competitive and you will only pay what we quote you for. There are no hidden charges or extra fees. 
     - image: service-gas.jpg
-      heading: Gas Works
-      text: From landlord certificates to gas leaks, our gas safe engineers are on hand to help.
+      heading: Boiler Installations
+      id: installation
+      text: We can a wide range of boiler installations. Use our quote calculator to get an estimate right now.
+      fullDescription1: We can a wide range of boiler installations. Use our quote calculator to get an estimate right now.
     - image: service-plumbing.jpg
-      heading: Plumbing
-      text: From a dripping tap to a burst pipe, we have you covered. No job is too small.
+      heading: Gas & Plumbing
+      id: plumbing
+      text: From landlord certificates to gas leaks, our gas safe engineers are on hand to help.
+      fullDescription1: From landlord certificates to gas leaks, our gas safe engineers are on hand to help.
+
+quote:
+  heading: Boiler Quote
+  subheading: Get your free boiler quote here. Fast and free
+  btn: Retrieve Quote
 
 contact:
   heading: Contact Us
