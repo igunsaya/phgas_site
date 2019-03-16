@@ -1,0 +1,13 @@
+#your-quote {
+    display: none;
+    background-color: white;
+    color: black;
+    padding: 40px;
+    margin: 20px;
+}
+
+#your-quote img{
+    max-width:100%;
+    height:auto;
+    margin-bottom: 30px;
+}

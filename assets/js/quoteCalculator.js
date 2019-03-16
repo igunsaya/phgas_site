@@ -6,16 +6,21 @@ $(function () {
         submitSuccess: function ($form, event) {
             event.preventDefault();
             // get values from FORM
+            var selectedBoiler = $("select#boilerBrand").find(':selected').val();
             var boilercost = $("select#boilerBrand").find(':selected').data('cost');
             var hotWaterCylinderCost = $("select#hotWaterCylinder").find(':selected').data('cost');
 
+            $("#boilerImage").attr("src",`assets/img/boiler-${selectedBoiler}.jpg`);
+            $('#your-quote').show(100);
+            
             // Success message
-            $('#success').html("<div class='alert alert-success'>");
-            $('#success > .alert-success')
-                .append(`Estimated cost: <Strong>\£${boilercost + hotWaterCylinderCost}</String>`);
-            $('#success > .alert-success')
+            $('#priceWrapper').html("<div class='price'>");
+            $('#priceWrapper > .price')
+                .append(`<div>Estimated cost</div>`);
+                $('#priceWrapper > .price')
+                .append(`<h2>\£${boilercost + hotWaterCylinderCost}</h2>`);
+            $('#priceWrapper > .price')
                 .append('</div>');
-            $('#quoteForm').trigger("reset");
         },
         filter: function () {
             return $(this).is(":visible");
