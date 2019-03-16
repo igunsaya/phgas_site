@@ -30,9 +30,32 @@
     transition: .5s ease;
     background-color: black;
   }
+
+  .overlay-icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+  }
   
   .image-container:hover .overlay {
     opacity: 0.7;
+  }
+
+  .icon {
+    position: absolute;
+    top: 95%;
+    left: 95%;
+    -webkit-transform: translate(-95%, -95%);
+    -ms-transform: translate(-95%, -95%);
+    transform: translate(-95%, -95%);
+    text-align: right;
+    color: $primary;
+    font-size: 0.8rem;
   }
   
   .image-text {

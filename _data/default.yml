@@ -11,5 +11,5 @@ nav:
     url: '#contact'
 
 social-buttons:
-  - icon: fa fa-instagram
+  - icon: fab fa-instagram
     url: 'https://instagram.com/phgas'
