@@ -46,7 +46,33 @@ layout: default
         <h4 class="service-heading">{{ service.heading }}</h4>
         <p class="text-muted">{{ service.text }}</p>
       </div>
-      <div  id="{{service.id}}" class="modal" tabindex="-1" role="dialog">
+
+      <div class="portfolio-modal modal fade" id="{{service.id}}" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+              <div class="lr">
+                <div class="rl"></div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8 mx-auto">
+                  <div class="modal-body">
+                    <h2 class="text-uppercase">{{ service.heading }}</h2>
+                    <p class="item-intro text-muted">{{ service.text }}</p>
+                    <button class="btn btn-primary" data-dismiss="modal" type="button">
+                      <i class="{{ site.data.default.modal.close-icon }}"></i>
+                      Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div  id="{{service.id}}" class="modal" tabindex="-1" role="dialog">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
@@ -58,12 +84,9 @@ layout: default
               <div class="modal-body">
                 <p>{{ service.text }}</p>
               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              </div>
             </div>
           </div>
-      </div>
+      </div> -->
       {%- endfor -%}
       {% assign ws = '' %}
     </div>
