@@ -29,13 +29,40 @@ layout: default
         <h3 class="section-subheading text-muted">{{ site.data.home.services.subheading }}</h3>
       </div>
     </div>
+    
     <div class="row text-center">
       {%- for service in site.data.home.services.service -%}
       {% assign ws = '' %}
       <div class="col-md-4 service-container">
-        <img src="{{ assets_path }}img/{{service.image}}" alt="">
+        <div class="image-container">
+          <a class="serviceImage" data-toggle="modal" data-target="#{{service.id}}">
+            <img src="{{ assets_path }}img/{{service.image}}" alt="" class="image">
+            <div class="overlay">
+                <div class="image-text">More Info</div>
+              </div>
+          </a>
+        </div>
+        
         <h4 class="service-heading">{{ service.heading }}</h4>
         <p class="text-muted">{{ service.text }}</p>
+      </div>
+      <div  id="{{service.id}}" class="modal" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">{{ service.heading }}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>{{ service.text }}</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
       </div>
       {%- endfor -%}
       {% assign ws = '' %}

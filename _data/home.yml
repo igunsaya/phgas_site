@@ -10,12 +10,15 @@ services:
   service:
     - image: service-boiler.jpg
       heading: Boiler Repair
+      id: boiler
       text: We offer same day emergency boiler repairs at competitive rates. All our work is guranteed
     - image: service-gas.jpg
       heading: Gas Works
+      id: gas
       text: From landlord certificates to gas leaks, our gas safe engineers are on hand to help.
     - image: service-plumbing.jpg
       heading: Plumbing
+      id: plumbing
       text: From a dripping tap to a burst pipe, we have you covered. No job is too small.
 
 quote:
