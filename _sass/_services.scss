@@ -9,13 +9,13 @@
 
   .image-container {
     position: relative;
-    cursor: clickable;
+    cursor: pointer;
     width: 100%;
   }
   
   .image {
     display: block;
-    cursor: clickable;
+    cursor: pointer;
     width: 100%;
     height: auto;
   }
