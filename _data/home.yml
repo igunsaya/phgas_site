@@ -17,7 +17,7 @@ services:
     - image: service-gas.jpg
       heading: Boiler Installations
       id: installation
-      text: We can a wide range of boiler installations. Use our quote calculator to get an estimate right now.
+      text: We can provide a wide range of boiler installations. Use our quote calculator to get an estimate right now.
       fullDescription1: "Our team of highly experienced, professional and helpful engineers are all Gas Safe Registered. We provide a wide range of boiler installations ranging from the following:"
       bulletPoints:
         - bullet: Combination & Conventional Boiler Replacements
