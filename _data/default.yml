@@ -2,10 +2,10 @@ brand:
   name: PHGas
 menu-string: Menu
 
-covid-message:
-  title: 'COVID-19 UPDATE'
-  line1: 'We want to reassure you that we are still open for business and our services are still running as normal.'
-  line2: 'At PHGas, we care about keeping you and our community safe, so we’re taking extra precautions to protect and prevent COVID-19 spread.'
+# message:
+#   title: 'COVID-19 UPDATE'
+#   line1: 'We want to reassure you that we are still open for business and our services are still running as normal.'
+#   line2: 'At PHGas, we care about keeping you and our community safe, so we’re taking extra precautions to protect and prevent COVID-19 spread.'
 
 nav:
   - title: Services
