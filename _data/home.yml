@@ -2,7 +2,6 @@ intro:
   heading: 020 3633 1725
   lead-in: Quality Local Engineers
   btn1: Call us
-  btn2: Get a Quote
 
 services:
   heading: Services
@@ -17,7 +16,7 @@ services:
     - image: service-gas.jpg
       heading: Boiler Installations
       id: installation
-      text: We can provide a wide range of boiler installations. Use our quote calculator to get an estimate right now.
+      text: We can provide a wide range of boiler installations.
       fullDescription1: "Our team of highly experienced, professional and helpful engineers are all Gas Safe Registered. We provide a wide range of boiler installations ranging from the following:"
       bulletPoints:
         - bullet: Combination & Conventional Boiler Replacements
@@ -34,11 +33,6 @@ services:
       text: From landlord certificates to gas leaks, our gas safe engineers are on hand to help.
       fullDescription1: We cover all aspects of the Plumbing, Heating and Gas Services, and always to the highest standard. We work closely with landlords providing them with Gas Safety Inspections, as well as covering all areas of plumbing from fixing a dripping tap to fitting a full central heating system.
       fullDescription2: Our prices are very competitive and you will only pay what we quote you for. There are no hidden charges or extra fees.
-
-quote:
-  heading: Boiler Quote
-  subheading: Get your free boiler quote here. Fast and free
-  btn: Retrieve Quote
 
 contact:
   heading: Contact Us
